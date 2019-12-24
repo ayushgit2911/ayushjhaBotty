@@ -12,7 +12,7 @@ from uniborg import util
 DELETE_TIMEOUT = 5
 
 
-@borg.on(util.admin_cmd(pattern="loda (?P<shortname>\w+)$"))  # pylint:disable=E0602
+@borg.on(util.admin_cmd(pattern="load (?P<shortname>\w+)$"))  # pylint:disable=E0602
 async def load_reload(event):
     await event.delete()
     shortname = event.pattern_match["shortname"]
@@ -20,14 +20,14 @@ async def load_reload(event):
         if shortname in borg._plugins:  # pylint:disable=E0602
             borg.remove_plugin(shortname)  # pylint:disable=E0602
         borg.load_plugin(shortname)  # pylint:disable=E0602
-        msg = await event.respond(f"muted Successfully (re)loda pligon {shortname}")
+        msg = await event.respond(f"muted Successfully (re)load pligon {shortname}")
         await asyncio.sleep(DELETE_TIMEOUT)
         await msg.delete()
     except Exception as e:  # pylint:disable=C0103,W0703
         trace_back = traceback.format_exc()
         # pylint:disable=E0602
         logger.warn(f"Failed to (re)load plugin {shortname}: {trace_back}")
-        await event.respond(f"Failed to (re)loda pligon {shortname}: {e}")
+        await event.respond(f"Failed to (re)load pligon {shortname}: {e}")
 
 
 @borg.on(util.admin_cmd(pattern="(?:unloda|remove) (?P<shortname>\w+)$"))  # pylint:disable=E0602
@@ -40,7 +40,7 @@ async def remove(event):
         borg.remove_plugin(shortname)  # pylint:disable=E0602
         msg = await event.respond(f"Removed pligon {shortname}")
     else:
-        msg = await event.respond(f"Pligon {shortname} is not loda...")
+        msg = await event.respond(f"Pligon {shortname} is not load...")
     await asyncio.sleep(DELETE_TIMEOUT)
     await msg.delete()
 
