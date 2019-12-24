@@ -86,11 +86,11 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "© @UniBorg",
-                text="""@ebruiser **( Custom Built By** @ebruiser **)** 
+                text="""@ebruiser **( Custom Built By** @ayushjha_2911 **)** 
 **Verified Account:** ✅
-**Official Website:** https://t.me/ebruiser
+**Official Website:** https://t.me/ayushjha_2911
 
-**Pithun 3.7.4 (default, Sep 12 2019, 01:19:52)** 
+**Pithun 3.7.4 (default, December 23 2019, 01:19:52)** 
 **[GCC 7.4.0]**
 **Talethrun 1.10.6**
 
