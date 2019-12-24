@@ -32,7 +32,7 @@ async def _(event):
         e = "No Error"
     o = stdout.decode()
     if not o:
-        o = "**Tip**: \n`Nikal Lawde, Pehli Fursat Mei Nikal BSDK.`"
+        o = "**Tip**: \n`Hey you, Get out from here now.`"
     else:
         _o = o.split("\n")
         o = "`\n".join(_o)
