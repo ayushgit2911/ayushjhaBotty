@@ -30,11 +30,11 @@ class Uniborg(TelegramClient):
         self.config = api_config
 
         kwargs = {
-            "api_id": 6,
-            "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
-            "device_model": "Iphone 11 Pro Max (Clone)",
-            "app_version": "@r4v4n4",
-            "lang_code": "ml",
+            "api_id": 516440,
+            "api_hash": "094fdd9d2b7b1242907889ba3d9f899b",
+            "device_model": "Redmi 6 Pro (Clone)",
+            "app_version": "@ayushjha_2911",
+            "lang_code": "hi",
             **kwargs
         }
 
